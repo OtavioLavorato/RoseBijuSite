@@ -1354,6 +1354,35 @@
         transition: transform 0.4s ease;
         z-index: -1;
       }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .endereco {
+        font-weight: bold;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards;
+        background: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        gap: 8px;
+        margin-top: 25px;
+      }
+
+      .endereco i {
+        color: #000000; /* dourado */
+        font-size: 18px;
+      }
 
       .social-links a:hover {
         color: var(--obsidian);
@@ -1418,7 +1447,7 @@
       @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(30px);
         }
         to {
           opacity: 1;
@@ -1556,6 +1585,10 @@
             <span>Fale Conosco</span>
             <i class="fas fa-comment"></i>
           </a>
+        </div>
+        <div class="endereco">
+          <i class="fas fa-map-marker-alt"></i>
+          Rua Hans Klots, 464 – Osvaldo Cruz - SP
         </div>
       </div>
     </section>
