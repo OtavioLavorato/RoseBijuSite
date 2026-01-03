@@ -310,11 +310,33 @@
         padding: 0 1rem;
         z-index: 10;
       }
+      @media (max-width: 768px) {
+        .cards-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .carrossel-btn.prev-btn,
+        .carrossel-btn.next-btn {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        .tabs-navegacao {
+          justify-content: center;
+        }
 
+        .tab-btn {
+          flex: 1 1 45%; /* dois por linha */
+          max-width: 45%;
+          justify-content: center;
+          text-align: center;
+        }
+      }
       .carrossel-btn {
         width: 50px;
         height: 50px;
-        background: rgba(255, 255, 255, 0.9);
+        background: transparent;
         border: none;
         border-radius: 50%;
         font-size: 1.2rem;
@@ -610,6 +632,61 @@
       }
       .delay-2 {
         animation-delay: 0.4s;
+      }
+      /* ===== MOBILE: 2 PRODUTOS POR FILEIRA ===== */
+      @media (max-width: 768px) {
+        .colecao-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.7rem;
+        }
+
+        .produto-card {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .produto-imagem {
+          height: 170px;
+        }
+
+        .produto-imagem img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .produto-info {
+          padding: 0.7rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1;
+        }
+
+        .produto-info h3 {
+          font-size: 0.85rem;
+          line-height: 1.2;
+          margin-bottom: 0.3rem;
+        }
+
+        .produto-info p {
+          font-size: 0.75rem;
+          line-height: 1.3;
+          margin-bottom: 0.3rem;
+        }
+
+        .produto-categoria {
+          margin-top: auto;
+        }
+      }
+
+      /* NÃO deixa virar 1 coluna nem em celular pequeno */
+      @media (max-width: 360px) {
+        .colecao-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     </style>
   </head>
