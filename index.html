@@ -675,10 +675,58 @@
 
       /* GRID DE PRODUTOS COM INTERAÇÕES APRIMORADAS */
       .products-grid {
+        margin-top: 35px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem; /* Reduzido de 4rem para 3rem */
+        grid-template-columns: repeat(4, 1fr); /* Desktop grande */
+        gap: 20px;
+      }
+
+      /* Laptops grandes */
+      @media (max-width: 1200px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* Tablets grandes */
+      @media (max-width: 992px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* Celulares grandes */
+      @media (max-width: 768px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* Celulares médios */
+      @media (max-width: 576px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* Celulares pequenos */
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* Celulares muito pequenos (menos de 360px) */
+      @media (max-width: 360px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
       }
 
       .product-card {
@@ -1570,51 +1618,6 @@
         </div>
 
         <!-- GRID DE PRODUTOS -->
-        <div class="products-grid">
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img src="images/COLAR.jpeg" alt="Colar Prata" />
-            </div>
-            <div class="product-info">
-              <h3>Colares Sofisticados</h3>
-              <p>Elegância em linhas essenciais.</p>
-              <span class="product-category">Colares</span>
-            </div>
-          </div>
-
-          <div class="product-card fade-in delay-1">
-            <div class="product-image">
-              <img src="images/brincos.jpeg" alt="Brincos de Alta Qualidade" />
-            </div>
-            <div class="product-info">
-              <h3>Brincos Geométricos</h3>
-              <p>Formas modernas e atemporais.</p>
-              <span class="product-category">Brincos</span>
-            </div>
-          </div>
-
-          <div class="product-card fade-in delay-2">
-            <div class="product-image">
-              <img src="images/anel.jpeg" alt="Anel Minimalista" />
-            </div>
-            <div class="product-info">
-              <h3>Braceletes Minimalistas</h3>
-              <p>Simplicidade com presença.</p>
-              <span class="product-category">Anéis</span>
-            </div>
-          </div>
-
-          <div class="product-card fade-in delay-3">
-            <div class="product-image">
-              <img src="images/bolsas.jpeg" alt="Bolsas Luxuosas" />
-            </div>
-            <div class="product-info">
-              <h3>Bolsas Luxuosas</h3>
-              <p>Estilo e acabamento refinado.</p>
-              <span class="product-category">Bolsas</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
